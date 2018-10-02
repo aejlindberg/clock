@@ -4,7 +4,6 @@ import "./index.css"
 
 class Clock extends React.Component {
 
-
     state = {
       date: new Date()
     }
@@ -37,19 +36,16 @@ class Clock extends React.Component {
       )
     }
 
-
-  render() {
-    return (
-      <div>
-        <h1>{this.state.date.toLocaleTimeString()}</h1>
+    render() {
+      return (
+        <div>
+          <h1>{this.state.date.toLocaleTimeString()}</h1>
           <div className="buttonContainer">
-            <button onClick={this.stopClock} value="clicked">Stop</button>
-            <button onClick={this.startClock}>Start</button>
+            <button id="buttonStop" onClick={this.stopClock}>Stop</button>
+            <button id="buttonStart" onClick={this.startClock}>Start</button>
           </div>
-      </div>
-    )
-  }
-
+        </div>
+      )}
 }
 
 ReactDOM.render(

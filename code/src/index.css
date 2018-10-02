@@ -7,7 +7,7 @@ body {
   background-size: contain;
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font-family: "Orbitron", sans-serif;
 }
 
 div {
@@ -19,10 +19,10 @@ div {
 
 h1 {
   font-size: 68px;
-  color: red;
-  font-family: "Orbitron", sans-serif;
+  font-weight: 900px;
+  color: silver;
   letter-spacing: 10px;
-  text-shadow: 0 0 3px #FF0000;
+  text-shadow: 0 0 3px silver;
   display: flex;
   justify-content: center;
 }
@@ -35,10 +35,21 @@ h1 {
 }
 
 button {
-  height: 50px;
-  width: 50px;
+  color: #fff;
+  border-color: #000;
+  font-size: 18px;
+  height: 100px;
+  width: 100px;
   border-radius: 100%;
   margin: 20px;
-  background-color: silver;
-  border-color: silver;
+}
+
+#buttonStop {
+  background-color: #FF0000;
+
+}
+
+#buttonStart {
+  background-color: green;
+
 }
