@@ -4,6 +4,7 @@ import "./index.css"
 
 class Clock extends React.Component {
 
+
     state = {
       date: new Date()
     }
@@ -25,14 +26,24 @@ class Clock extends React.Component {
       })
     }
 
-  
+    stopClock = () => {
+      clearInterval(this.timerID)
+    }
+
+    startClock = () => {
+      this.timerID = setInterval(
+        () => this.tick(),
+        1000
+      )
+    }
 
   render() {
     return (
       <div>
-        <h1>Hello, world!</h1>
-        <h2>It is {this.state.date.toLocaleTimeString()}.</h2>
-        <button>Click me</button>
+        <h1>The time is:</h1>
+        <h2>{this.state.date.toLocaleTimeString()}</h2>
+        <button onClick={this.stopClock}>Stop</button>
+        <button onClick={this.startClock}>Start</button>
       </div>
     )
   }
@@ -40,6 +51,6 @@ class Clock extends React.Component {
 }
 
 ReactDOM.render(
-  <Clock date/>,
+  <Clock />,
   document.getElementById("root")
 )
