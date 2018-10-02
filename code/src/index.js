@@ -9,15 +9,13 @@ class Clock extends React.Component {
       date: new Date()
     }
 
+// This adds the sec counter
     componentDidMount() {
-      this.timerID = setInterval(
-        () => this.tick(),
-        1000
-      )
+      this.startClock()
     }
 
     componentWillUnmount() {
-      clearInterval(this.timerID)
+      this.stopClock()
     }
 
     tick() {
@@ -26,10 +24,12 @@ class Clock extends React.Component {
       })
     }
 
+// This stops the clock
     stopClock = () => {
       clearInterval(this.timerID)
     }
 
+// This starts the clock
     startClock = () => {
       this.timerID = setInterval(
         () => this.tick(),
@@ -37,13 +37,15 @@ class Clock extends React.Component {
       )
     }
 
+
   render() {
     return (
       <div>
-        <h1>The time is:</h1>
-        <h2>{this.state.date.toLocaleTimeString()}</h2>
-        <button onClick={this.stopClock}>Stop</button>
-        <button onClick={this.startClock}>Start</button>
+        <h1>{this.state.date.toLocaleTimeString()}</h1>
+          <div className="buttonContainer">
+            <button onClick={this.stopClock} value="clicked">Stop</button>
+            <button onClick={this.startClock}>Start</button>
+          </div>
       </div>
     )
   }
