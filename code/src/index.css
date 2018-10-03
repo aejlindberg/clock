@@ -2,9 +2,10 @@
 
 
 body {
-  background-image: url(/night.jpg);
+  /* background-image: url(/night.jpg); */
   background-position: center;
-  background-size: contain;
+  background-size: cover;
+
   margin: 0;
   padding: 0;
   font-family: "Orbitron", sans-serif;
@@ -36,7 +37,6 @@ h1 {
 
 button {
   color: #fff;
-  border-color: #000;
   font-size: 18px;
   height: 100px;
   width: 100px;

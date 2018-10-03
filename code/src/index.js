@@ -37,6 +37,12 @@ class Clock extends React.Component {
     }
 
     render() {
+      const dayTime = this.state.date.getHours()
+      if (dayTime >= 12 && dayTime < 19) {
+        document.getElementById("myPage").style.backgroundImage= "url(/day.jpg)"
+      } else {
+        document.getElementById("myPage").style.backgroundImage= "url(/night.jpg)"
+      }
       return (
         <div>
           <h1>{this.state.date.toLocaleTimeString()}</h1>
