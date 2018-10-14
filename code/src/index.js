@@ -38,20 +38,23 @@ class Clock extends React.Component {
 
     render() {
       const dayTime = this.state.date.getHours()
-      if (dayTime >= 12 && dayTime < 19) {
-        document.getElementById("myPage").style.backgroundImage= "url(/day.jpg)"
+      if (dayTime >= 7 && dayTime < 19) {
+        document.getElementById("myPage").style.backgroundImage = "url(/day.png)"
       } else {
-        document.getElementById("myPage").style.backgroundImage= "url(/night.jpg)"
+        document.getElementById("myPage").style.backgroundImage = "url(/night.png)"
       }
       return (
-        <div>
-          <h1>{this.state.date.toLocaleTimeString()}</h1>
+        <div className="wrapper">
+          <div className="clockContainer">
+            <h1>{this.state.date.toLocaleTimeString()}</h1>
+          </div>
           <div className="buttonContainer">
             <button id="buttonStop" onClick={this.stopClock}>Stop</button>
             <button id="buttonStart" onClick={this.startClock}>Start</button>
           </div>
         </div>
-      )}
+      )
+    }
 }
 
 ReactDOM.render(

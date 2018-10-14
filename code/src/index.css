@@ -2,30 +2,40 @@
 
 
 body {
-  /* background-image: url(/night.jpg); */
   background-position: center;
   background-size: cover;
-
-  margin: 0;
-  padding: 0;
+  object-position: center;
   font-family: "Orbitron", sans-serif;
+  margin: 0;
 }
 
-div {
-  width: 500px;
-  margin: 80px auto;
-  display: flex;
-  flex-direction: column;
+button {
+  border: none;
+  border-radius: 50%;
+  color: silver;
+  font-size: 18px;
+  height: 100px;
+  margin: 20px;
+  outline: none;
+  width: 100px;
 }
 
 h1 {
   font-size: 68px;
   font-weight: 900px;
-  color: silver;
+  color: #FAFAFF;
   letter-spacing: 10px;
-  text-shadow: 0 0 3px silver;
   display: flex;
   justify-content: center;
+}
+
+.wrapper {
+  margin: 150px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.clockContainer {
 }
 
 .buttonContainer {
@@ -35,21 +45,19 @@ h1 {
   justify-content: center;
 }
 
-button {
-  color: #fff;
-  font-size: 18px;
-  height: 100px;
-  width: 100px;
-  border-radius: 100%;
-  margin: 20px;
+#buttonStop {
+  background-color: #66101F;
 }
 
-#buttonStop {
+#buttonStop:hover {
   background-color: #FF0000;
-
 }
 
 #buttonStart {
+  background-color: #3B5939;
+}
+
+#buttonStart:hover {
   background-color: green;
 
 }
