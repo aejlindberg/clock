@@ -39,9 +39,9 @@ class Clock extends React.Component {
     render() {
       const dayTime = this.state.date.getHours()
       if (dayTime >= 7 && dayTime < 19) {
-        document.getElementById("myPage").style.backgroundImage = "url(/day.png)"
+        document.getElementById("myPage").style.backgroundImage = "url(./day.png)"
       } else {
-        document.getElementById("myPage").style.backgroundImage = "url(/night.png)"
+        document.getElementById("myPage").style.backgroundImage = "url(./night.png)"
       }
       return (
         <div className="wrapper">
